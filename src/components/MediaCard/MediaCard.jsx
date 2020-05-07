@@ -9,7 +9,8 @@ import Paper from '@material-ui/core/Paper';
 import Fade from '@material-ui/core/Fade';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import '../../../styles/ProjectCard.scss'
+import Image from '../../img/showcase-image.png'
+import './MediaCard.scss'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -20,12 +21,14 @@ const useStyles = makeStyles(theme => ({
     paper: {
         maxWidth: '90vw',
         height: 'auto',
+        macHeight: '90vh',
         margin: '40px auto',
         borderRadius: '10px',
         overflow: 'hidden',
-        '&:hover': {
-
-        },
+    },
+    imageOverlay: {
+        fontSize: theme.typography.pxToRem(40),
+        fontFamily: 'Rajdhani',
     },
     title: {
         padding: '20px',
@@ -52,13 +55,13 @@ const useStyles = makeStyles(theme => ({
     image: {
         minHeight: '100%',
         width: 'auto',
-        maxWidth: '100vw',
+        maxWidth: '90vw',
         maxHeight: '100vw',
         paddingRight: '10px',
     },
   }));
 
-export default function ProjectCard() {
+export default function MediaCard(props) {
 
     const classes = useStyles();
 
@@ -70,19 +73,22 @@ export default function ProjectCard() {
                         <Grid container direction="row">
                             <Grid item xs={12} sm container justify="flex-start">
                                 <Grid item className="card-image-container">
-                                    <img className={`card-image ${classes.image}`} src="https://via.placeholder.com/400" />
+                                    <Typography className={`image-overlay ${classes.imageOverlay}`}>
+                                        {props.hoverText}
+                                    </Typography>
+                                    <img className={`card-image ${classes.image}`} src={props.image} />
                                 </Grid>
                                 <Grid item xs container direction="column" spacing={2}>
                                     <Grid item xs>
                                         <Typography align="left" gutterBottom className={classes.title}>
-                                            Title
+                                            {props.title}
                                             <Divider />
                                         </Typography>
                                         <Typography align="left" gutterBottom className={classes.description}>
-                                            Body
+                                            {props.body}
                                         </Typography>
                                         <Typography align="left" color="textSecondary" className={classes.subText}>
-                                            Subtext
+                                            {props.subText}
                                         </Typography>
                                     </Grid>
                                 </Grid>

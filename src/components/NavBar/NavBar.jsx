@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import logoImage from '../img/logo192.png'
+import logoImage from '../../img/logo192.png'
 import { Link } from 'react-router-dom';
-import '../styles/NavBar.scss';
+import './NavBar.scss';
 
 export default class NavBar extends Component{
 

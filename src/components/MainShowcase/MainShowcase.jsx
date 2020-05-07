@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../styles/MainShowcase.scss';
+import './MainShowcase.scss';
 import { Link } from 'react-router-dom';
-import ShowcaseImage from '../img/showcase-image.png'
+import ShowcaseImage from '../../img/showcase-image.png'
 
     
 export default class MainShowcase extends Component {

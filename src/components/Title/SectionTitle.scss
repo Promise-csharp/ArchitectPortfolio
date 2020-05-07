@@ -1,0 +1,37 @@
+.title-container {
+    width: 90vw;
+    margin: auto;
+    overflow: hidden;
+    }
+.title {
+    margin: 2em 0 1em 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 3em;
+    }
+
+.divider {
+    line-height: 0.5;
+    text-align: center;
+    }
+.divider span {
+    display: inline-block;
+    position: relative;  
+    }
+.divider span:before,
+.divider span:after {
+content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 2px solid #222;
+    border-top: 2px solid white;
+    top: 0;
+    width: 550px;
+    }
+.divider span:before {
+    right: 100%;
+    margin-right: 15px;
+    }
+.divider span:after {
+    left: 100%;
+    margin-left: 15px;
+    }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import NavBar from '../../components/NavBar';
-import MainShowcase from '../../components/MainShowcase'
-import ProjectCard from '../../pages/projects/components/ProjectCard'
+import NavBar from '../../components/NavBar/NavBar';
+import MainShowcase from '../../components/MainShowcase/MainShowcase'
+import ProjectCard from './components/ProjectCard/ProjectCard'
 
 const useStyles = makeStyles(theme => ({
     spacer: {
@@ -18,7 +18,6 @@ export default function Home() {
         <div style={{height:'auto',overflow:'hidden'}}>
             <NavBar />
             <MainShowcase />
-            <ProjectCard />
             <ProjectCard />
         </div>
     )
