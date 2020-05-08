@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
     paper: {
         maxWidth: '90vw',
         height: 'auto',
-        maxHeight: '90vh',
         margin: '40px auto',
         borderRadius: '10px',
         overflow: 'hidden',

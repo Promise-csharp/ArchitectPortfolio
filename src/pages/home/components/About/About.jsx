@@ -11,6 +11,10 @@ const useStyles = makeStyles(theme => ({
     },
     button: {
         minHeight: '50px',
+        fontFamily: 'Rajdhani',
+        fontSize: '20px',
+        borderRadius: '0',
+        padding: '10px 25px',
     },
 }))
 
@@ -33,7 +37,7 @@ export default function About() {
                 Mattis enim ut tellus elementum.
                 </p>
                 <Typography className={classes.buttonBox} align='center'>
-                    <Button className={classes.button} variant="outlined" size="large" href='/'>
+                    <Button className={classes.button} size="large" href='/' variant='outlined' target="_blank" rel="_noopener">
                         Resume
                     </Button>
                 </Typography>
