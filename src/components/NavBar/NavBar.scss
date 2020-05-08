@@ -226,7 +226,7 @@ li.dropdown {
     }
     .nav-bar a {
         width:100%;
-        margin:0 ;
+        margin:0;
         line-height: 31px;
         display: block;
         border: 1px solid #bbb;
@@ -247,14 +247,11 @@ li.dropdown {
     }
     #toggle:checked ~ .nav-bar{
         display: block;
-        // -webkit-animation-name: slide-ins;
-        // -webkit-animation-duration: .5s;
+        -webkit-animation: slide-ins 0.5s;
         z-index: -1;
         margin-top:10px;
-        // -webkit-animation-name: fade-in;
-        // -webkit-animation-duration: 2s;
-        // animation: slideIn 0.6s cubic-bezier(0.54, 0.46, 0.54, 0.94) 2s forwards;
-        // animation: fadeIn 0s ease-in 0s forwards;}
+        animation: slideIn 0.6s cubic-bezier(0.54, 0.46, 0.54, 0.94) 2s forwards;
+        animation: fadeIn 0s ease-in 0s forwards;
     }
     
         @keyframes fade-in {

@@ -11,19 +11,31 @@
     transform: translate(-50%, -100%);
     transition: 0.3s ease;
     opacity: 0;
+    color: #222;
+    z-index: 1;
+}
+.overlay-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: white;
+    transition: 0.2s ease;
+}
+.card:hover .overlay-background {
+    opacity: 0.5;
 }
 .card:hover .image-overlay {
     opacity: 1;
     transform: translate(-50%, -50%);
 }
-.card-image{
+.img {
     top:0;
     left:0;
     object-fit: cover;
     z-index:-1;
 }
-.card:hover .card-image {
-    transition: 0.1s ease;
+.card:hover .img {
     opacity: .5;
 }
 .arrow {
@@ -37,8 +49,18 @@
     transition: 0.3s ease;
 }
 .card:hover {
-    background-color: rgba(141, 141, 141, 0.05);
     box-shadow: 2px 5px 5px  grey;
     transition: 0.3s ease;
     cursor: pointer;
 }
+
+@keyframes color-me-in {
+    /* You could think of as "step 1" */
+    0% {
+      background: white;
+    }
+    /* You could think of as "step 2" */
+    50% {
+      background: white;
+    }
+  }

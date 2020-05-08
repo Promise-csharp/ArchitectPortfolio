@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './MainShowcase.scss';
-import { Link } from 'react-router-dom';
 import ShowcaseImage from '../../img/showcase-image.png'
+import './MainShowcase.scss';
 
     
 export default class MainShowcase extends Component {
@@ -10,7 +9,7 @@ export default class MainShowcase extends Component {
             
             <div className="showcase-container">
                 <div className="showcase">
-                    <img className='main-showcase-image' src={ShowcaseImage} />
+                    <img className='main-showcase-image' src={ShowcaseImage} alt="Full window render of a space craft" />
                     
                     <h1 className="title-text">ARCHITECTURE DESIGN PORTFOLIO</h1>
                     <div className="culture-container">

@@ -5,10 +5,6 @@ import './NavBar.scss';
 
 export default class NavBar extends Component{
 
-    constructor(props){
-        super(props)
-    }
-
     pageIsSelected(currentPage, checkPage)
     {
         return ""

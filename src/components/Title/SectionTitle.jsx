@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './SectionTitle.scss'
 
 export default function SectionTitle(props) {
