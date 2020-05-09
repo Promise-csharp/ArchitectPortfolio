@@ -9,7 +9,7 @@ const projects =[
     {
         title:'Project Title 1',
         body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        subText:'Date added: May 8th, 2020',
+        subText:'Date completed: May 8th, 2020',
         hoverText:'View Project',
         displayType:'row',
         link:'/',
@@ -19,7 +19,7 @@ const projects =[
     {
         title:'Project Title 2',
         body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        subText:'Date added: May 8th, 2020',
+        subText:'Date completed: May 8th, 2020',
         hoverText:'View Project',
         displayType:'row',
         link:'/',
@@ -29,7 +29,7 @@ const projects =[
     {
         title:'Project Title 3',
         body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        subText:'Date added: May 8th, 2020',
+        subText:'Date completed: May 8th, 2020',
         hoverText:'View Project',
         displayType:'row',
         link:'/',
@@ -39,7 +39,7 @@ const projects =[
     {
         title:'Project Title 4',
         body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        subText:'Date added: May 8th, 2020',
+        subText:'Date completed: May 8th, 2020',
         hoverText:'View Project',
         displayType:'row',
         link:'/',
@@ -64,30 +64,41 @@ const useStyles = makeStyles(theme => ({
 export default function ProjectCard() {
 
     const classes = useStyles();
-    const [showItems, setshowItems] = useState(3);
-    const [label, setLabel] = useState('More');
+    const [showItems, setshowItems] = useState(2);
+    const [label, setLabel] = useState('All');
+    const [showLabelCount, setShowLabelCount] = useState(true);
 
     const handleLabelChange = () => {
-        if (label === 'More') {
+        if (label === 'All') {
             setLabel('Less')
         }
         else {
-            setLabel('More')
+            setLabel('All')
         }
     }
 
     const handleShowMore = () => {
         if (showItems >= projects.length) {
-            setshowItems(3)
+            setshowItems(2)
         }
         else {
             setshowItems(projects.length)
         }
     }
 
+    const handleShowLabelCount = () => {
+        if (label === 'All') {
+            setShowLabelCount(false)
+        }
+        else {
+            setShowLabelCount(true)
+        }
+    }
+
     const handleChange = () => {
         handleLabelChange();
         handleShowMore();
+        handleShowLabelCount();
     }
 
     return (
@@ -107,9 +118,12 @@ export default function ProjectCard() {
             />
                 </div>))}
             <Typography className={classes.buttonBox} align='center'>
-                <Button className={classes.button} onClick={ handleChange } size="large" variant='outlined'>
-                    Show {label} 
-                    {/* ({projects.length - showItems}) */}
+                <Button className={classes.button} onClick={handleChange} size="large" variant='outlined'>
+                    Show {label}
+                    {showLabelCount === true
+                    ?   ` (${projects.length})`
+                    :   ''
+                    }
                 </Button>
             </Typography>
         </div>

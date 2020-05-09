@@ -35,6 +35,8 @@ const useStyles = makeStyles(theme => ({
         padding: '20px',
         fontSize: theme.typography.pxToRem(20),
         fontFamily: 'Rajdhani',
+        textOverflow: 'ellipsis',
+        overflow: 'hidden',
     },
     subText: {
         padding: '20px',
@@ -49,11 +51,8 @@ const useStyles = makeStyles(theme => ({
         height: '100%',
     },
     image: {
-        minHeight: '100%',
-        minWidth: '100%',
-        maxWidth: '400px',
-        maxHeight: '100vw',
-        paddingRight: '10px',
+        height: '100%',
+        width: '100%',
     },
   }));
 
@@ -65,7 +64,7 @@ export default function MediaCard(props) {
         <div className={classes.root}>
             <Link to={props.link} style={{ textDecoration: 'none' }}>
                 <Paper className={`card ${classes.paper}`}>
-                    <ButtonBase className={classes.root}>
+                    <ButtonBase>
                         <Grid container direction={props.displayType}>
                             <Grid item xs={12} sm container justify="flex-start">
                                 <Grid item className="card-image-container">
