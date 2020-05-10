@@ -73,13 +73,13 @@ export default class NavBar extends Component{
                     </div></div>
                     <ul className="nav-bar">               
                         <li className={`nav-bar-item ${this.pageIsSelected("about", this.props.page)}`}>
-                             <Link to="/">About</Link>
+                             <a href="#about">About</a>
                         </li> 
                         <li className={`nav-bar-item ${this.pageIsSelected("projects", this.props.page)}`}>
-                            <Link to="/">Projects</Link>
+                            <a href="#projects">Projects</a>
                         </li>   
                         <li className={`nav-bar-item ${this.pageIsSelected("contact", this.props.page)}`}>
-                            <Link to="/">Contact</Link>
+                            <a href={"mailto:boudreaurachael123@gmail.com"} target="_blank" rel="noopener noreferrer">Contact</a>
                         </li>
                     </ul>
                 </div>

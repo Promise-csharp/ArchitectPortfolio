@@ -2,6 +2,7 @@
     width: 90vw;
     margin: auto;
     overflow: hidden;
+    position: relative;
     }
 .title {
     margin: 2em 0 1em 0;
@@ -9,7 +10,10 @@
     font-family: 'Rajdhani', sans-serif;
     font-size: 3em;
     }
-
+.spacer {
+    height: 2em;
+    margin-top: -2em;
+}
 .divider {
     line-height: 0.5;
     text-align: center;
@@ -36,3 +40,16 @@ content: "";
     left: 100%;
     margin-left: 15px;
     }
+
+@media only screen and (max-width: 800px) {
+    .title {
+        margin: 1em 0 1em 0;
+        color: #222;
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 3em;
+        }
+    .spacer {
+        height: 0.5em;
+        margin-top: -0.5em;
+    }
+}

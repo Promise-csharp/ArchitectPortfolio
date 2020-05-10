@@ -24,7 +24,7 @@ export default function About() {
     
     return (
         <div>
-            <SectionTitle title='About Me' />
+            <SectionTitle title='About Me' id="about"/>
             <div className="intro-paragraph-container">
                 <img src='https://via.placeholder.com/150' alt="Personal avatar" className="curve"></img>
                 <p className="intro-paragraph">
@@ -37,7 +37,7 @@ export default function About() {
                 Mattis enim ut tellus elementum.
                 </p>
                 <Typography className={classes.buttonBox} align='center'>
-                    <Button className={classes.button} size="large" href='/' variant='outlined' target="_blank" rel="_noopener">
+                    <Button className={classes.button} size="large" href='/' variant='outlined' target="_blank" rel="noopener noreferrer">
                         Resume
                     </Button>
                 </Typography>

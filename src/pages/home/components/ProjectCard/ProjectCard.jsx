@@ -103,7 +103,7 @@ export default function ProjectCard() {
 
     return (
         <div>
-            <SectionTitle title='Projects' />
+            <SectionTitle title='Projects' id="projects"/>
             {projects.slice(0, showItems).map(project => (
                 <div className="projects-project-link-container">
                     <MediaCard 

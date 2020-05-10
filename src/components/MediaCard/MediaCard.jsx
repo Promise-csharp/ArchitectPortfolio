@@ -35,7 +35,6 @@ const useStyles = makeStyles(theme => ({
         padding: '20px',
         fontSize: theme.typography.pxToRem(20),
         fontFamily: 'Rajdhani',
-        textOverflow: 'ellipsis',
         overflow: 'hidden',
     },
     subText: {
@@ -80,10 +79,10 @@ export default function MediaCard(props) {
                                             {props.title}
                                             <Divider />
                                         </Typography>
-                                        <Typography align="left" gutterBottom className={classes.description}>
-                                            {props.body}
+                                        <Typography align="left" gutterBottom className={`ellipsis ${classes.description}`}>
+                                            <span>{props.body}</span>
                                         </Typography>
-                                        <Typography align="left" color="textSecondary" className={classes.subText}>
+                                        <Typography align="left" gutterBottom color="textSecondary" className={classes.subText}>
                                             {props.subText}
                                         </Typography>
                                     </Grid>

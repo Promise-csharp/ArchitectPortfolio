@@ -1,3 +1,7 @@
+$lineheight:19px;
+$height: $lineheight * 7;
+$ellipsiswidth: 3em !default;
+
 .card-image-container {
     background-size: cover;
     position: relative;
@@ -53,14 +57,36 @@
     transition: 0.3s ease;
     cursor: pointer;
 }
-
-@keyframes color-me-in {
-    /* You could think of as "step 1" */
-    0% {
-      background: white;
-    }
-    /* You could think of as "step 2" */
-    50% {
-      background: white;
-    }
+.ellipsis {
+    overflow: hidden;
+    height: $height;
+    line-height: $lineheight; 
+}
+  
+  .ellipsis:before {
+    content:"";
+    float: left;
+    width: 5px; height: $height; 
+}
+  
+  .ellipsis > *:first-child {
+    float: right;
+    width: 100%;
+    margin-left: -5px; 
+}		
+  
+  .ellipsis:after {
+    content: "\02026";
+  
+    float: right; 
+    position: relative;
+    top: -$lineheight; 
+    left: 100%; 
+    width: $ellipsiswidth; 
+    margin-left: -$ellipsiswidth;
+    padding-right: 5px;
+  
+    text-align: right;
+    background: white;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white)
   }
