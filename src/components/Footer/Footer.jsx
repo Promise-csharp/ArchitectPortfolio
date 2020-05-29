@@ -25,7 +25,10 @@ export default function Footer() {
                 <Grid container direction="column" justify="center" className={classes.signature}>
                     <Grid item>
                         <div>
-                            &copy; {new Date().getFullYear()} Created by: <a className="creator" target="_blank" rel="noopener noreferrer" href='https://www.jessieboudreau.com'> Jessie Boudreau </a>
+                            &copy; {new Date().getFullYear()} Created by: 
+                            <a className="creator" target="_blank" rel="noopener noreferrer" href='https://www.jessieboudreau.com'> 
+                                Jessie Boudreau 
+                            </a>
                         </div>
                     </Grid>
                 </Grid>

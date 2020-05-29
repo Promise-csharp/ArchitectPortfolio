@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import logoImage from '../../img/logo192.png'
+// import logoImage from '../../img/logo192.png'
 import { Link } from 'react-router-dom';
 import './NavBar.scss';
 
@@ -62,9 +62,9 @@ export default class NavBar extends Component{
             <div className="tracker-backgound">
                 <div id={`${headerClass}`}>
                     <div className="logo">
-                    <Link className="logo-image" to="/">
+                    {/* <Link className="logo-image" to="/">
                         <img src={logoImage} className="logo-image" alt=""></img> 
-                    </Link>
+                    </Link> */}
                     <Link className="logo-text" to="/">Rachael's Portfolio</Link>
                     </div>
 

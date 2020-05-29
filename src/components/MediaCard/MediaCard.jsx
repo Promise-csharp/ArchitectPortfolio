@@ -50,8 +50,10 @@ const useStyles = makeStyles(theme => ({
         height: '100%',
     },
     image: {
+        objectFit: 'cover',
         height: '100%',
         width: '100%',
+        maxWidth: '90vw',
     },
   }));
 
@@ -66,14 +68,14 @@ export default function MediaCard(props) {
                     <ButtonBase>
                         <Grid container direction={props.displayType}>
                             <Grid item xs={12} sm container justify="flex-start">
-                                <Grid item className="card-image-container">
+                                <Grid item xs={12} sm={5} md={4} className="card-image-container">
                                     <Typography className={`image-overlay ${classes.imageOverlay}`}>
                                         {props.hoverText}
                                     </Typography>
                                     <div className="overlay-background" />
-                                    <img className={`card-image ${classes.image}`} src={props.image} alt={props.altText} />
+                                    <img className={`card-image ${classes.image}`} src={props.src} alt={props.altText} />
                                 </Grid>
-                                <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs={12} sm={7} md={7} container direction="column" spacing={2}>
                                     <Grid item xs>
                                         <Typography align="left" gutterBottom className={classes.title}>
                                             {props.title}
@@ -88,7 +90,7 @@ export default function MediaCard(props) {
                                     </Grid>
                                 </Grid>
                                 {window.innerWidth < 800 ? <div /> : 
-                                <Grid item>
+                                <Grid item md={1}>
                                     <Typography className={classes.arrow}>
                                         <ChevronRightIcon className="arrow" fontSize="large"/>
                                     </Typography>
