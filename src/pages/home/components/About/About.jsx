@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import SectionTitle from '../../../../components/Title/SectionTitle'
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Resume from '../../../../docs/Resume-2020.pdf'
 import {AnimatedOnScroll} from "react-animated-css-onscroll";
 import './About.scss'
 
@@ -32,18 +33,15 @@ export default function About() {
                 </AnimatedOnScroll>
                 <AnimatedOnScroll animationIn="slideInRight" animationInDuration={400}>
                     <p className="intro-paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                    mollit anim id est laborum. Eget dolor morbi non arcu risus quis varius quam quisque. Arcu dui vivamus arcu 
-                    felis bibendum ut. Nisi scelerisque eu ultrices vitae auctor eu. Sed turpis tincidunt id aliquet risus. 
-                    Mattis enim ut tellus elementum.
+                    I am a student currently majoring in Architectural Design and will be completing my Bachelor’s Degree at 
+                    Carleton University in the spring of 2023. Architecture is my passion and I really enjoy all the work I 
+                    have done in and outside of school. My projects range from hand-drafting to digital modeling and 
+                    hand-crafted models. Here you will see some of my class projects, and personal designs. 
                     </p>
                 </AnimatedOnScroll>
                 <Typography className={classes.buttonBox} align='center'>
                 <AnimatedOnScroll animationIn="fadeInUp" animationInDuration={800}>
-                    <Button className={classes.button} size="large" href='/' variant='outlined' target="_blank" rel="noopener noreferrer">
+                    <Button className={classes.button} size="large" href={Resume} variant='outlined' target="_blank" rel="noopener noreferrer">
                         Resume
                     </Button>
                 </AnimatedOnScroll>

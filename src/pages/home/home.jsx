@@ -4,6 +4,9 @@ import MainShowcase from '../../components/MainShowcase/MainShowcase'
 import About from './components/About/About'
 import ProjectCard from './components/ProjectCard/ProjectCard'
 import BarLoader from '../../components/LoadingBars/BarLoader'
+import Socials from '../../components/Socials/Socials'
+import SectionTitle from '../../components/Title/SectionTitle'
+import './home.scss'
 
 export default class Home extends Component {
     constructor(props){
@@ -15,8 +18,8 @@ export default class Home extends Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0, 0)
-      } 
+        window.scrollTo(0, 0);
+    } 
 
     Loaded = () => {
         this.setState({
@@ -28,12 +31,14 @@ export default class Home extends Component {
     render() {
 
         return (
-            <div style={{height:'auto', overflow:'hidden'}}>
+            <div className='root' style={{height:'auto', overflow:'hidden'}}>
                 {this.state.loadingElement} 
                 <NavBar />
                 <MainShowcase loaded={this.Loaded} />
                 <About />
                 <ProjectCard />
+                <SectionTitle id="connect" title='Stay Updated!' />
+                <Socials />
             </div>
         )
     }

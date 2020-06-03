@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ShowcaseImage from '../../img/showcase-image.png'
+import ShowcaseImage from '../../img/greenhouse/render-exterior-greenhouse.jpg'
 import {AnimatedOnScroll} from "react-animated-css-onscroll";
 import './MainShowcase.scss';
 
