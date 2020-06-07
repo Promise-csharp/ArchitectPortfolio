@@ -7,6 +7,7 @@ import Container from '@material-ui/core/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FeatureWidget from '@mui-treasury/components/widget/FeatureWidget';
 import { useFullBorderedGridStyles } from '@mui-treasury/styles/grid/fullBordered';
+import {AnimatedOnScroll} from "react-animated-css-onscroll";
 
 const socials = [
     {
@@ -27,7 +28,7 @@ const socials = [
     {
       icon: ['fab', 'tumblr'],
       title: 'Tumblr',
-      content: "I also share project updates through my Tumblr",
+      content: "Follow project updates through my Tumblr",
       children: (
         <Button
           variant="outlined"
@@ -87,16 +88,18 @@ const socials = [
                             sm={6}
                             md={4}
                         >
+                          <AnimatedOnScroll animationIn="fadeIn" animationInDuration={800}>
                             <FeatureWidget
-                            classes={widgetStyles}
-                            title={title}
-                            content={content}
-                            renderIcon={({ className }) => (
+                              classes={widgetStyles}
+                              title={title}
+                              content={content}
+                              renderIcon={({ className }) => (
                                 <FontAwesomeIcon icon={icon} className={className} />
                             )}
                             >
                             <Box textAlign={'center'}>{children}</Box>
                             </FeatureWidget>
+                          </AnimatedOnScroll>
                         </Grid>
                         ))}
                     </Grid>
