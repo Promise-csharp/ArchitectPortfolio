@@ -63,7 +63,7 @@ export default class Makerspace extends Component {
                     contents={[
                         <div>
                             <main>
-                                <div>
+                                <div className="content">
                                     <h1>Makerspace</h1>
                                     <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
                                         <Link color="inherit" href="/">

@@ -18,7 +18,7 @@ const projects =[
         subText:'Date completed: May 8th, 2020',
         hoverText:'View Project',
         displayType:'row',
-        link:'/projects/greenhouse',
+        link:'/',
         image:GreenhouseThumb,
         altText:'400x400 placeholder',
     },

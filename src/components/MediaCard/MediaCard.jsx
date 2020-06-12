@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
@@ -63,7 +63,7 @@ export default function MediaCard(props) {
 
     return (
         <div className={classes.root}>
-            <a href={props.link} style={{ textDecoration: 'none' }}>
+            <Link to={props.link} style={{ textDecoration: 'none' }}>
                 <Paper className={`card ${classes.paper}`}>
                     <ButtonBase>
                         <Grid container direction={props.displayType}>
@@ -100,7 +100,7 @@ export default function MediaCard(props) {
                         </Grid>
                     </ButtonBase>
                 </Paper>
-            </a>
+            </Link>
         </div>
     );
 }
